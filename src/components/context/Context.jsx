@@ -1,8 +1,15 @@
-import React from 'react'
+import {createContext, useState} from 'react'
 
-const Context = () => {
+export const Restaurant= createContext();
+
+const Context = ({children}) => {
+    const [dishMenu, setDishMenu] = useState([])
+
   return (
-    <div>Context</div>
+    <Restaurant.Provider value={{menu, setMenu}}>
+        {children}
+    </Restaurant.Provider>
+
   )
 }
 
