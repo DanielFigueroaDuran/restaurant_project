@@ -6,7 +6,7 @@ const Context = ({children}) => {
     const [dishMenu, setDishMenu] = useState([])
 
   return (
-    <Restaurant.Provider value={{menu, setMenu}}>
+    <Restaurant.Provider value={{dishMenu, setDishMenu}}>
         {children}
     </Restaurant.Provider>
 
